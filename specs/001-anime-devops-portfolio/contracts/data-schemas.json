@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Portfolio Data Contracts",
+  "description": "JSON schemas for portfolio data validation",
+
+  "hero": {
+    "type": "object",
+    "properties": {
+      "name": {"type": "string", "minLength": 1},
+      "title": {"type": "string", "minLength": 1},
+      "subtitle": {"type": "string"},
+      "avatar": {"type": "string"}
+    },
+    "required": ["name", "title"]
+  },
+
+  "about": {
+    "type": "object",
+    "properties": {
+      "description": {"type": "string", "minLength": 1},
+      "highlights": {"type": "array", "items": {"type": "string"}}
+    },
+    "required": ["description"]
+  },
+
+  "skill": {
+    "type": "object",
+    "properties": {
+      "name": {"type": "string", "minLength": 1},
+      "level": {"type": "integer", "minimum": 1, "maximum": 5},
+      "category": {"type": "string"}
+    },
+    "required": ["name", "level"]
+  },
+
+  "tool": {
+    "type": "object",
+    "properties": {
+      "name": {"type": "string", "minLength": 1},
+      "description": {"type": "string", "minLength": 1},
+      "icon": {"type": "string", "minLength": 1},
+      "proficiency": {"type": "string"}
+    },
+    "required": ["name", "description", "icon"]
+  },
+
+  "experience": {
+    "type": "object",
+    "properties": {
+      "position": {"type": "string", "minLength": 1},
+      "company": {"type": "string", "minLength": 1},
+      "startDate": {"type": "string", "format": "date"},
+      "endDate": {"type": "string", "format": "date"},
+      "description": {"type": "string", "minLength": 1},
+      "achievements": {"type": "array", "items": {"type": "string"}}
+    },
+    "required": ["position", "company", "startDate", "description"]
+  },
+
+  "project": {
+    "type": "object",
+    "properties": {
+      "name": {"type": "string", "minLength": 1},
+      "description": {"type": "string", "minLength": 1},
+      "technologies": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+      "link": {"type": "string", "format": "uri"},
+      "github": {"type": "string", "format": "uri"},
+      "image": {"type": "string"}
+    },
+    "required": ["name", "description", "technologies"]
+  },
+
+  "contact": {
+    "type": "object",
+    "properties": {
+      "email": {"type": "string", "format": "email"},
+      "linkedin": {"type": "string", "format": "uri"},
+      "github": {"type": "string", "format": "uri"},
+      "otherLinks": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string"},
+            "url": {"type": "string", "format": "uri"}
+          },
+          "required": ["name", "url"]
+        }
+      }
+    },
+    "required": ["email"]
+  }
+}

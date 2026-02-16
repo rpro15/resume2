@@ -1,50 +1,55 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# constitution.md
 
-## Core Principles
+## Основополагающие принципы
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Аниме-центричный дизайн (Anime-First Design)
+Визуальный язык сайта строится вокруг эстетики аниме и киберпанка: неоновые градиенты, стеклянные карточки, игровые шрифты и анимация частиц. Каждый элемент должен вызывать эмоции и запоминаться, при этом не мешая восприятию контента.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Прозрачность контента (Content Transparency)
+Все навыки, проекты и опыт представлены честно и без прикрас. Информация легко обновляется через отдельные файлы данных (JSON/JS), чтобы поддерживать актуальность без правки вёрстки.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Адаптивность как обязанность (Mobile-Responsive Core)
+Сайт обязан безупречно работать на любых устройствах — от смартфонов до 4K-мониторов. Анимации и сложные эффекты должны корректно масштабироваться или отключаться на маломощных устройствах.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Производительность превыше эффектов (Performance Obsession)
+Любое визуальное украшение оправдано только в том случае, если оно не снижает скорость загрузки и не вызывает подтормаживаний. Ленивая загрузка изображений, оптимизация Lottie-файлов и минимизация JavaScript — обязательны.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Доступность по умолчанию (Accessibility by Default)
+Контрастность текста, семантическая вёрстка, навигация с клавиатуры и поддержка скринридеров встроены в процесс разработки. Сайт должен быть удобен для всех пользователей.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### VI. Инфраструктура как код (Infrastructure as Code Mindset)
+Даже персональный сайт рассматривается как продукт: конфигурации, данные проектов и настройки хранятся в управляемых файлах, что упрощает тестирование и развёртывание.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### VII. Образовательная игривость (Edutainment)
+Контент подаётся в лёгкой, увлекательной форме, но без потери технической глубины. Посетитель должен одновременно вдохновляться и узнавать что-то новое о DevOps-инструментах.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+---
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Технические ограничения и стек (Technical Constraints & Stack)
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+- Языки и технологии: HTML5, CSS3, JavaScript (ES6+).
+- CSS-фреймворк: Tailwind CSS (кастомизация через конфиг).
+- Анимации: Lottie (JSON-анимации частиц), CSS-переходы.
+- Иконки: SVG-спрайты / Heroicons.
+- Шрифты: Google Fonts — Inter (основной), Press Start 2P (акцентный).
+- Деплой: GitHub Pages (или Netlify/Vercel) с автоматической сборкой.
+- Внешние зависимости: допускаются только легковесные библиотеки (типа Lottie-Web). Запрещены тяжёлые фреймворки (React, Vue), если они не оправданы.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+---
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+## Процесс разработки (Development Workflow)
+
+1. Ведение версий: Git, основная ветка main, feature-ветки для новых разделов.
+2. Код-ревью: перед слиянием обязательно ревью как минимум одним участником (или автопроверка линтерами).
+3. Качество:
+   - Используется Prettier для единого форматирования.
+   - HTML-код проверяется на семантику и доступность.
+   - Производительность тестируется в Lighthouse (порог >90).
+4. Тестирование: проверка в последних версиях Chrome, Firefox, Safari, а также на мобильных устройствах (iOS/Android).
+5. Документирование: изменения фиксируются в CHANGELOG.md, а при изменении структуры — обновляется constitution.md.
+
+---
+
+## Управление и поправки (Governance & Amendments)
+
+Настоящая конституция является высшим руководством для проекта. Любые отклонения от принципов или изменения в техническом стеке должны быть оформлены в виде Pull Request с подробным обоснованием. Поправки вступают в силу после утверждения автором проекта (или консенсусом основных контрибьюторов).

@@ -1,0 +1,26 @@
+{
+  "name": "anime-devops-portfolio",
+  "version": "1.0.0",
+  "description": "Single-page personal portfolio website with anime aesthetics for a Junior DevOps engineer",
+  "main": "src/index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --watch",
+    "build": "npm run build-css",
+    "dev": "npm run build-css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "lottie-web": "^5.12.2",
+    "typed.js": "^2.0.16"
+  },
+  "keywords": [
+    "portfolio",
+    "devops",
+    "anime",
+    "tailwindcss"
+  ],
+  "author": "Junior DevOps Engineer",
+  "license": "MIT"
+}
