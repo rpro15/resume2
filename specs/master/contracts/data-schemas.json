@@ -1,4 +1,15 @@
-{
+# Создаём папку specs и фичу вручную
+New-Item -ItemType Directory -Path .\specs\001-finish-project -Force
+
+# Если есть шаблон, скопируем его
+If (Test-Path .\.specify\templates\spec-template.md) {
+  Copy-Item .\.specify\templates\spec-template.md .\specs\001-finish-project\spec.md -Force
+} else {
+  New-Item -ItemType File -Path .\specs\001-finish-project\spec.md -Force
+}
+
+# Выведем результат
+Get-ChildItem .\specs\001-finish-project -Recurse | Format-List{
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Portfolio Data Contracts",
   "description": "JSON schemas for portfolio data validation",

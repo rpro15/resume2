@@ -80,9 +80,9 @@ const portfolioData = {
         }
     ],
     contact: {
-        email: 'alex.johnson@email.com',
+        email: 'rpro15@mail.ru',
         linkedin: 'https://linkedin.com/in/alexjohnson',
-        github: 'https://github.com/alexj',
+        github: 'https://github.com/rpro15',
         otherLinks: [
             { name: 'Portfolio', url: 'https://alexjohnson.dev' }
         ]
