@@ -1,8 +1,8 @@
 // Portfolio data
 const portfolioData = {
     hero: {
-        name: 'Alex Johnson',
-        title: 'Junior DevOps Engineer',
+        name: 'Ruslan Durdyyev',
+        title: ' DevOps Engineer',
         subtitle: 'Building scalable infrastructure with passion',
         avatar: 'assets/images/avatar.jpg'
     },
