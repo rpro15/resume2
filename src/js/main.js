@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         contactInfo.innerHTML = `
             <div class="glass-card p-6 inline-block">
                 <p class="text-lg mb-2"><strong>Email:</strong> <a href="mailto:${portfolioData.contact.email}" class="text-neon-teal hover:underline">${portfolioData.contact.email}</a></p>
-                <p class="text-lg mb-2"><strong>LinkedIn:</strong> <a href="${portfolioData.contact.linkedin}" target="_blank" class="text-neon-teal hover:underline">View Profile</a></p>
+                <p class="text-lg mb-2"><strong>Telegram:</strong> <a href="${portfolioData.contact.Telegram}" target="_blank" class="text-neon-teal hover:underline">@rpro15</a></p>
                 <p class="text-lg"><strong>GitHub:</strong> <a href="${portfolioData.contact.github}" target="_blank" class="text-neon-teal hover:underline">View Repos</a></p>
             </div>
         `;

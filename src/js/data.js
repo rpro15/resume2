@@ -15,7 +15,7 @@ const portfolioData = {
         ]
     },
     skills: [
-        { name: 'Kubernetes', level: 4, category: 'Container Orchestration' },
+        { name: 'Kubernetes', level: 3, category: 'Container Orchestration' },
         { name: 'Docker', level: 5, category: 'Containerization' },
         { name: 'AWS', level: 3, category: 'Cloud Platforms' },
         { name: 'Terraform', level: 4, category: 'IaC' },
@@ -81,7 +81,7 @@ const portfolioData = {
     ],
     contact: {
         email: 'rpro15@mail.ru',
-        linkedin: 'https://linkedin.com/in/alexjohnson',
+        Telegram: 'https://t.me/rpro15',
         github: 'https://github.com/rpro15',
         otherLinks: [
             { name: 'Portfolio', url: 'https://alexjohnson.dev' }
