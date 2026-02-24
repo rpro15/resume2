@@ -1,11 +1,15 @@
-# Tasks: Create a single-page personal portfolio website for a Junior DevOps engineer with anime aesthetics
+---
+description: "Task list for anime-themed DevOps portfolio implementation"
+---
+
+# Tasks: Anime DevOps Portfolio
 
 **Input**: Design documents from `/specs/001-anime-devops-portfolio/`
-**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
+**Prerequisites**: plan.md, spec.md, data-model.md, contracts/data-schemas.json, research.md, quickstart.md
 
-**Tests**: Tests are OPTIONAL - not requested in feature specification, so none included.
+**Tests**: Tests are OPTIONAL for this static website. Manual testing and Lighthouse audits will be used.
 
-**Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
+**Organization**: Tasks are grouped by user story to enable independent implementation and testing of each section.
 
 ## Format: `[ID] [P?] [Story] Description`
 
@@ -13,30 +17,33 @@
 - **[Story]**: Which user story this task belongs to (e.g., US1, US2, US3)
 - Include exact file paths in descriptions
 
-## Path Conventions
-
-- Single project: `src/`, `tests/` at repository root
-- Paths based on plan.md structure
+---
 
 ## Phase 1: Setup (Shared Infrastructure)
 
 **Purpose**: Project initialization and basic structure
 
-- [X] T001 Create project structure per implementation plan
-- [X] T002 Install Tailwind CSS, Lottie-Web, Typed.js dependencies
-- [X] T003 [P] Configure Tailwind build process in src/config/tailwind.config.js
+- [X] T001 Create project structure: src/, src/css/, src/js/, src/assets/images/, src/assets/lottie/, src/config/
+- [X] T002 Initialize package.json with Tailwind CSS, Lottie-web, Typed.js dependencies
+- [X] T003 [P] Configure Tailwind CSS in src/config/tailwind.config.js with custom anime theme colors
+- [ ] T004 [P] Setup build scripts in package.json for Tailwind CSS compilation and watch mode
 
 ---
 
 ## Phase 2: Foundational (Blocking Prerequisites)
 
-**Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
+**Purpose**: Core HTML structure, CSS framework, and animation libraries that ALL user stories depend on
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [X] T004 Create base index.html with section placeholders in src/index.html
-- [X] T005 [P] Setup data.js with sample data per data-model.md in src/js/data.js
-- [X] T006 [P] Initialize basic CSS with Tailwind imports in src/css/styles.css
+- [X] T005 Create base HTML structure in src/index.html with semantic sections (hero, about, skills, toolbox, experience, projects, contact)
+- [X] T006 [P] Setup Tailwind CSS in src/css/tailwind.css with @tailwind directives
+- [X] T007 [P] Create custom CSS styles in src/css/styles.css for glass-morphism and neon gradient effects
+- [X] T008 [P] Initialize Lottie-web library integration in src/js/animations.js for particle background
+- [X] T009 [P] Initialize Typed.js library integration in src/js/animations.js for typing effect
+- [X] T010 Create portfolio data structure in src/js/data.js following contracts/data-schemas.json
+- [X] T011 Create main JavaScript controller in src/js/main.js for DOM manipulation and data population
+- [X] T012 Link all CSS and JS files in src/index.html with proper CDN links for Lottie and Typed.js
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -50,9 +57,9 @@
 
 ### Implementation for User Story 1
 
-- [X] T007 [US1] Add hero HTML structure in src/index.html
-- [X] T008 [US1] Style hero with glass-morphism and neon gradients in src/css/styles.css
-- [X] T009 [US1] Populate hero data in src/js/data.js
+- [X] T013 [US1] Add hero HTML structure in src/index.html
+- [X] T014 [US1] Style hero with glass-morphism and neon gradients in src/css/styles.css
+- [X] T015 [US1] Populate hero data in src/js/data.js
 
 **Checkpoint**: Hero section functional and visually appealing
 
@@ -66,9 +73,9 @@
 
 ### Implementation for User Story 2
 
-- [X] T010 [US2] Add about HTML structure in src/index.html
-- [X] T011 [US2] Style about section with anime card design in src/css/styles.css
-- [X] T012 [US2] Populate about data in src/js/data.js
+- [X] T016 [US2] Add about HTML structure in src/index.html
+- [X] T017 [US2] Style about section with anime card design in src/css/styles.css
+- [X] T018 [US2] Populate about data in src/js/data.js
 
 **Checkpoint**: About section complete and readable
 
@@ -82,9 +89,9 @@
 
 ### Implementation for User Story 3
 
-- [X] T013 [US3] Add skills HTML structure in src/index.html
-- [X] T014 [US3] Style skills with progress bars and icons in src/css/styles.css
-- [X] T015 [US3] Populate skills data in src/js/data.js
+- [X] T019 [US3] Add skills HTML structure in src/index.html
+- [X] T020 [US3] Style skills with progress bars and icons in src/css/styles.css
+- [X] T021 [US3] Populate skills data in src/js/data.js
 
 **Checkpoint**: Skills section visually represents proficiency levels
 
@@ -98,10 +105,10 @@
 
 ### Implementation for User Story 4
 
-- [X] T016 [US4] Add toolbox HTML structure in src/index.html
-- [X] T017 [US4] Style toolbox with tool cards in src/css/styles.css
-- [X] T018 [US4] Populate toolbox data with icons in src/js/data.js
-- [X] T019 [US4] Add tool SVG icons in src/assets/images/
+- [X] T022 [US4] Add toolbox HTML structure in src/index.html
+- [X] T023 [US4] Style toolbox with tool cards in src/css/styles.css
+- [X] T024 [US4] Populate toolbox data with icons in src/js/data.js
+- [X] T025 [US4] Add tool SVG icons in src/assets/images/
 
 **Checkpoint**: DevOps tools displayed with proper branding
 
@@ -115,9 +122,9 @@
 
 ### Implementation for User Story 5
 
-- [X] T020 [US5] Add experience HTML structure in src/index.html
-- [X] T021 [US5] Style experience timeline in src/css/styles.css
-- [X] T022 [US5] Populate experience data in src/js/data.js
+- [X] T026 [US5] Add experience HTML structure in src/index.html
+- [X] T027 [US5] Style experience timeline in src/css/styles.css
+- [X] T028 [US5] Populate experience data in src/js/data.js
 
 **Checkpoint**: Experience history clearly presented
 
@@ -131,9 +138,9 @@
 
 ### Implementation for User Story 6
 
-- [X] T023 [US6] Add projects HTML structure in src/index.html
-- [X] T024 [US6] Style project cards in src/css/styles.css
-- [X] T025 [US6] Populate projects data in src/js/data.js
+- [X] T029 [US6] Add projects HTML structure in src/index.html
+- [X] T030 [US6] Style project cards in src/css/styles.css
+- [X] T031 [US6] Populate projects data in src/js/data.js
 
 **Checkpoint**: Projects showcase technical work
 
@@ -147,9 +154,9 @@
 
 ### Implementation for User Story 7
 
-- [X] T026 [US7] Add contact HTML structure in src/index.html
-- [X] T027 [US7] Style contact form/links in src/css/styles.css
-- [X] T028 [US7] Populate contact data in src/js/data.js
+- [X] T032 [US7] Add contact HTML structure in src/index.html
+- [X] T033 [US7] Style contact form/links in src/css/styles.css
+- [X] T034 [US7] Populate contact data in src/js/data.js
 
 **Checkpoint**: Contact information accessible
 
@@ -163,10 +170,10 @@
 
 ### Implementation for User Story 8
 
-- [X] T029 [US8] Integrate Lottie particle animation in src/js/animations.js
-- [X] T030 [US8] Add Lottie JSON file in src/assets/lottie/particles.json
-- [X] T031 [US8] Implement Typed.js for DevOps commands in src/js/animations.js
-- [X] T032 [US8] Style animation containers in src/css/styles.css
+- [X] T035 [US8] Integrate Lottie particle animation in src/js/animations.js
+- [X] T036 [US8] Add Lottie JSON file in src/assets/lottie/particles.json
+- [X] T037 [US8] Implement Typed.js for DevOps commands in src/js/animations.js
+- [X] T038 [US8] Style animation containers in src/css/styles.css
 
 **Checkpoint**: Animations enhance visual appeal without performance impact
 
@@ -180,9 +187,9 @@
 
 ### Implementation for User Story 9
 
-- [X] T033 [US9] Add responsive breakpoints in src/css/styles.css
-- [X] T034 [US9] Optimize mobile navigation in src/index.html
-- [X] T035 [US9] Test and adjust animations for mobile in src/js/animations.js
+- [X] T039 [US9] Add responsive breakpoints in src/css/styles.css
+- [X] T040 [US9] Optimize mobile navigation in src/index.html
+- [X] T041 [US9] Test and adjust animations for mobile in src/js/animations.js
 
 **Checkpoint**: Fully responsive across devices
 
@@ -192,11 +199,15 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [X] T036 [P] Add semantic HTML and ARIA labels for accessibility in src/index.html
-- [X] T037 [P] Optimize performance (lazy load images, minify) in src/
-- [X] T038 [P] Add smooth scrolling and navigation in src/js/main.js
-- [X] T039 Validate against constitution.md principles
-- [X] T040 Run quickstart.md setup validation
+- [X] T042 [P] Add semantic HTML and ARIA labels for accessibility in src/index.html
+- [X] T043 [P] Optimize performance (lazy load images, minify) in src/
+- [X] T044 [P] Add smooth scrolling and navigation in src/js/main.js
+- [X] T045 Validate against constitution.md principles
+- [X] T046 Run quickstart.md setup validation
+- [ ] T047 Run Lighthouse audit on http://localhost:8000; document score in quickstart.md; optimize if score <90
+- [ ] T048 Run axe DevTools accessibility scan; fix all violations to meet WCAG 2.1 AA compliance
+- [ ] T049 Profile animations with Chrome Performance tab; ensure 60fps maintained during scroll and interactions
+- [ ] T050 Cross-browser testing: Validate site on Chrome 120+, Firefox 120+, Safari 17+, iOS Safari, Chrome Android
 
 ---
 

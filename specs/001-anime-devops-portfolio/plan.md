@@ -67,6 +67,18 @@ src/
 └── config/
     └── tailwind.config.js  # Tailwind configuration
 
+.prettierrc             # Prettier code formatting config
+CHANGELOG.md           # Project changelog
+package.json           # Node.js project metadata and scripts
+```
+│   ├── animations.js   # Lottie and Typed.js logic
+│   └── data.js         # Portfolio data
+├── assets/
+│   ├── images/         # Images and icons
+│   └── lottie/         # Lottie JSON files
+└── config/
+    └── tailwind.config.js  # Tailwind configuration
+
 tests/
 ├── accessibility/      # Accessibility tests
 ├── performance/        # Lighthouse configs

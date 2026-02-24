@@ -6,9 +6,13 @@
   "scripts": {
     "build-css": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --watch",
     "build": "npm run build-css",
-    "dev": "npm run build-css"
+    "dev": "npm run build-css",
+    "watch": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --watch",
+    "format": "prettier --write src/**/*.{html,css,js}",
+    "format:check": "prettier --check src/**/*.{html,css,js}"
   },
   "devDependencies": {
+    "prettier": "^3.8.1",
     "tailwindcss": "^3.4.0"
   },
   "dependencies": {

@@ -2,26 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Body background animation */
+body {
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 25%,
+    #0f3460 50%,
+    #1a1a2e 75%,
+    #16213e 100%
+  );
+  background-size: 400% 400%;
+  animation: backgroundShift 8s ease infinite;
+  position: relative;
+}
+
 /* Custom styles for anime aesthetics */
 @layer components {
   .glass-card {
     @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-lg;
   }
-  
+
   .neon-gradient {
     background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
     background-size: 400% 400%;
     animation: gradientShift 4s ease infinite;
   }
-  
+
   .hero-text {
     @apply text-transparent bg-clip-text bg-gradient-to-r from-neon-pink via-neon-teal to-neon-blue;
     text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
   }
-  
+
+  @keyframes backgroundShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }

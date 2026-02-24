@@ -1,95 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junior DevOps Engineer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="bg-gray-900 text-white min-h-screen">
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Руслан Дурдыев - DevOps Engineer | Portfolio</title>
+    <meta
+      name="description"
+      content="Junior DevOps Engineer с опытом в автоматизации, контейнеризации и управлении инфраструктурой. Linux, Docker, Kubernetes, Ansible, Python."
+    />
+    <meta
+      name="keywords"
+      content="DevOps, Linux, Docker, Kubernetes, Ansible, Python, CI/CD, GitLab, Prometheus, Grafana"
+    />
+    <meta name="author" content="Руслан Дурдыев" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen">
     <!-- Lottie Animation Container -->
-    <div id="lottie-background" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0" aria-hidden="true"></div>
+    <div
+      id="lottie-background"
+      class="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
+      aria-hidden="true"
+    ></div>
 
     <!-- Typing Animation Container -->
-    <div id="typing-container" class="fixed bottom-4 left-4 z-10" aria-label="DevOps commands typing animation">
-        <span id="typing-element" class="text-green-400 font-mono"></span>
+    <div
+      id="typing-container"
+      class="fixed bottom-4 left-4 z-10"
+      aria-label="DevOps commands typing animation"
+    >
+      <span id="typing-element" class="text-green-400 font-mono"></span>
     </div>
 
     <main>
-    <section id="hero" class="min-h-screen flex items-center justify-center relative z-10" role="banner" aria-labelledby="hero-name">
+      <section
+        id="hero"
+        class="min-h-screen flex items-center justify-center relative z-10"
+        role="banner"
+        aria-labelledby="hero-name"
+      >
         <div class="text-center glass-card p-12 max-w-2xl">
-            <h1 id="hero-name" class="text-6xl font-bold mb-4 hero-text">Name</h1>
-            <h2 id="hero-title" class="text-3xl mb-4 text-white">Title</h2>
-            <p id="hero-subtitle" class="text-xl text-gray-300">Subtitle</p>
+          <h1 id="hero-name" class="text-6xl font-bold mb-4 hero-text">Name</h1>
+          <h2 id="hero-title" class="text-3xl mb-4 text-white">Title</h2>
+          <p id="hero-subtitle" class="text-xl text-gray-300">Subtitle</p>
         </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4">
+      <!-- About Section -->
+      <section id="about" class="py-20 px-4">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
-            <div class="glass-card p-8">
-                <p id="about-description" class="text-lg mb-6"></p>
-                <div id="about-highlights" class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <!-- Highlights will be populated -->
-                </div>
+          <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+          <div class="glass-card p-8">
+            <p id="about-description" class="text-lg mb-6"></p>
+            <h3 class="text-xl font-semibold mb-4 text-center">Certifications</h3>
+            <div id="about-highlights" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <!-- Certifications will be populated -->
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 bg-gray-800">
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 px-4 bg-gray-800">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Skills</h2>
-            <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Skills will be populated -->
-            </div>
+          <h2 class="text-4xl font-bold mb-8 text-center">Skills</h2>
+          <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skills will be populated -->
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- DevOps Toolbox Section -->
-    <section id="toolbox" class="py-20 px-4">
+      <!-- DevOps Toolbox Section -->
+      <section id="toolbox" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">DevOps Toolbox</h2>
-            <div id="toolbox-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Tools will be populated -->
-            </div>
+          <h2 class="text-4xl font-bold mb-8 text-center">DevOps Toolbox</h2>
+          <div id="toolbox-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Tools will be populated -->
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 px-4 bg-gray-800">
+      <!-- Experience Section -->
+      <section id="experience" class="py-20 px-4 bg-gray-800">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Experience</h2>
-            <div id="experience-list" class="space-y-8">
-                <!-- Experience will be populated -->
-            </div>
+          <h2 class="text-4xl font-bold mb-8 text-center">Experience</h2>
+          <div id="experience-list" class="space-y-8">
+            <!-- Experience will be populated -->
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4">
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Projects</h2>
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projects will be populated -->
-            </div>
+          <h2 class="text-4xl font-bold mb-8 text-center">Projects</h2>
+          <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Projects will be populated -->
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-gray-800">
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 px-4 bg-gray-800">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
-            <div id="contact-info" class="space-y-4">
-                <!-- Contact info will be populated -->
-            </div>
+          <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+          <div id="contact-info" class="space-y-4">
+            <!-- Contact info will be populated -->
+          </div>
         </div>
-    </section>
+      </section>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
@@ -97,5 +123,5 @@
     <script src="js/data.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
