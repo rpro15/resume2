@@ -4,9 +4,9 @@
   "description": "Single-page personal portfolio website with anime aesthetics for a Junior DevOps engineer",
   "main": "src/index.html",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --watch",
+    "build-css": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css",
     "build": "npm run build-css",
-    "dev": "npm run build-css",
+    "dev": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --watch",
     "watch": "tailwindcss -i ./src/css/styles.css -o ./src/css/tailwind.css --watch",
     "format": "prettier --write src/**/*.{html,css,js}",
     "format:check": "prettier --check src/**/*.{html,css,js}"

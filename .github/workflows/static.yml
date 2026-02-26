@@ -24,6 +24,8 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    env:
+      PUBLISH_PATH: src
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -31,13 +33,35 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Build CSS
+        run: npm run build
+      - name: "Fail-fast: verify required CSS artifact"
+        run: |
+          chmod +x .github/scripts/verify-build-artifacts.sh
+          echo "Running artifact guard before Pages upload..."
+          if ! .github/scripts/verify-build-artifacts.sh; then
+            echo "::error::Required CSS artifact is missing (expected: src/css/tailwind.css)."
+            echo "::error::Fix: ensure npm dependencies install successfully and run npm run build before artifact upload."
+            exit 1
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: "Diagnose source publish path"
+        run: |
+          echo "Publishing directory: ${PUBLISH_PATH}"
+          ls -la
+          ls -la "${PUBLISH_PATH}"
+          ls -la "${PUBLISH_PATH}/css"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: ${{ env.PUBLISH_PATH }}
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

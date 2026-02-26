@@ -31,5 +31,29 @@ Files to edit for content:
 
 If you want I can also create a `docs/` version with the full spec text copied into a single document. Reply with which option you prefer.
 
+## GitHub Pages deployment notes
+
+- Deploy workflow: `.github/workflows/static.yml`
+- Required publish source: `src/`
+- Artifact upload path must stay aligned with workflow `PUBLISH_PATH`
+- CSS must be built before upload (`npm run build`) so `src/css/tailwind.css` is present
+
+Maintenance checklist for publish-path changes:
+
+1. Update `PUBLISH_PATH` in `.github/workflows/static.yml`.
+2. Verify diagnostics step lists expected files in `${PUBLISH_PATH}`.
+3. Confirm artifact upload still uses `${{ env.PUBLISH_PATH }}`.
+4. Run a workflow deployment and validate the live site reflects source-directory updates.
+
+Troubleshooting deployment failures:
+
+- Error: `Required CSS artifact is missing (expected: src/css/tailwind.css)`
+	- Run `npm ci`
+	- Run `npm run build`
+	- Confirm `src/css/tailwind.css` exists
+- Error appears before `Upload artifact`
+	- This is expected fail-fast behavior from `.github/scripts/verify-build-artifacts.sh`
+	- Resolve missing artifacts, then re-run workflow
+
 ---
 Generated: February 16, 2026

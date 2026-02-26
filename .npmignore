@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+coverage/
+.git/
+.github/
+specs/
+.vscode/
+.idea/
+*.log
+.env*
+*.tmp
+*.swp
