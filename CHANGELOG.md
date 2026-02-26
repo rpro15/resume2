@@ -20,6 +20,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Mobile-optimized animations and interactions
 - Prettier code formatting configuration
 - Task tracking and specification documentation
+- Deployment guard script for required Pages artifacts in .github/scripts/verify-build-artifacts.sh
+- Deployment diagnostics for publish source path in .github/workflows/static.yml
+- Feature quickstart verification guide for specs/001-fix-gh-pages-deploy/quickstart.md
 
 ### Changed
 - Translated portfolio content from Russian to English
@@ -28,6 +31,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Task status corrections for T008-T009 (Lottie/Typed.js marked as complete)
 - Removed duplicate task IDs in implementation phases
+- GitHub Pages workflow now verifies required CSS build artifact before upload
+- GitHub Pages artifact source path is explicitly controlled and logged (`src/`)
+
+### Documentation
+- Added publish-path maintenance and troubleshooting notes in README.md
+- Added final verification results for feature 001 in specs/001-fix-gh-pages-deploy/quickstart.md
 
 ### Quality Assurance
 - Constitution.md compliance validated
